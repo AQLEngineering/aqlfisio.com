@@ -1,0 +1,32 @@
+.aql-fisio-promotional-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  min-height: auto;
+  padding-bottom: 64px;
+}
+.aql-fisio-promotional-hero > :first-child { min-width: 0; }
+.aql-fisio-promotional-visual {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.aql-fisio-promotional-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.aql-fisio-promotional-visual > div,
+.aql-fisio-promotional-hero > div[aria-hidden="true"] { display: none; }
+@media (max-width: 760px) {
+  .aql-fisio-promotional-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-bottom: 40px;
+  }
+  .aql-fisio-promotional-visual { margin: 0; height: auto; width: 100%; }
+}
