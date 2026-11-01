@@ -1,0 +1,36 @@
+name: Close adoption campaign
+on:
+  schedule:
+    - cron: '15 0 1 1 *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  close:
+    if: github.repository == 'AQLEngineering/aqlfisio.com'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild expired offer in public HTML
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if [[ "$(date -u +%Y)" != "2027" ]]; then exit 0; fi
+          cd tools/seo
+          npm ci --ignore-scripts
+          AQL_SITE_VERSION=2027.01.01.1 AQL_SITE_MODIFIED=2027-01-01 node build-seo.cjs
+          npm run check
+          node stage-seo.cjs ../..
+          cd ../..
+          git config user.name 'AQL website automation'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html website-version.txt sitemap.xml robots.txt agenda-clinica processo-clinico exercicios-terapeuticos automacoes lia tools/seo
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Close 2026 adoption campaign in rendered pages'
+          git push
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"

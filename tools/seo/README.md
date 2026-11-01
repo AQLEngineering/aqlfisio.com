@@ -38,3 +38,9 @@ Publication uses a fresh checkout, stages only this release's files, preserves e
 Automated checks validate six complete HTML pages, metadata, canonical URLs, structured data, visible content, internal feature links, plan amounts and buy links. Local browser QA covered the preserved homepage, feature navigation, the agenda page at a narrow viewport and the LIA FAQ. No JavaScript errors were observed on the homepage.
 
 The Google verification tag was preserved. Search Console opened its public sign-in landing page in this session: submitting the sitemap and inspecting index status require the owner's signed-in account. Technical eligibility and sitemap publication do not establish or guarantee Google indexation or search position.
+
+## 2026.11.01.2 — adoption campaign
+
+Monthly first-subscription campaign: Gabinete €14.90, Clinic €29.90, Care €49.90, Intelligence €69.90, all net of VAT. New orders through 31 December 2026, payment within their seven-day validity. The first twelve months start on actual payment confirmation; subsequent renewals and plan changes preserve the same guarantee end. Additional professionals, modules and credits keep their separate rates. Annual discounts do not stack. Existing subscriptions are not retroactively repriced.
+
+The site uses date-aware cards and offers and retains the regular prices as reference. JSON-LD offers have a `priceValidUntil` date. A scheduled repository workflow rebuilds the initial public HTML after the campaign closes (1 January 2027), commits the snapshot and requests a Pages build with the repository's scoped workflow token. App eligibility ends automatically on the server; the workflow does not change existing customers' campaign entitlements. Patient records are unlimited; remote-follow-up active-patient allowances remain separate.

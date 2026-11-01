@@ -15,12 +15,13 @@ for(const file of ['index.html',...pages.map(p=>p.slug+'/index.html')]){
  assert.ok(!html.includes('href="#" class="text-sm text-slate-400'),'Legal footer links must resolve');
  assert.ok(!/<video\b/.test(html),'Do not reintroduce the removed video');
 }
+const vm=require('node:vm');const bundle=fs.readFileSync('index.js','utf8');const helper=bundle.slice(bundle.indexOf('function aqlCampaignActive('),bundle.indexOf('const aqlCampaignPrices='));const campaign=vm.runInNewContext(helper+';aqlCampaignActive');assert.equal(campaign(new Date('2026-12-31T23:59:59Z')),true);assert.equal(campaign(new Date('2027-01-01T00:00:00Z')),false);
 const home=fs.readFileSync('index.html','utf8');
 assert.ok(home.includes('<div id="root"><div'),'Homepage contains the prerendered site');
 for(const term of ['19,90','39,90','69,90','99,90','1024 MB','LIA','calendly.com/alberto-moreira-aqlengineering/30min'])assert.ok(home.includes(term),`Missing ${term}`);
 for(const plan of ['gabinete','clinic','care','intelligence'])assert.ok(home.includes(`signup=1&amp;plan=${plan}`));
 const app=JSON.parse(home.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(e=>e['@type']==='SoftwareApplication');
-assert.deepEqual(app.offers.map(o=>o.price),['19.90','39.90','69.90','99.90']);assert.ok(!app.aggregateRating&&!app.review);
+assert.deepEqual(app.offers.map(o=>o.price),new Date()<new Date('2027-01-01T00:00:00Z')?['14.90','29.90','49.90','69.90']:['19.90','39.90','69.90','99.90']);assert.ok(!app.aggregateRating&&!app.review);
 const sitemap=fs.readFileSync('sitemap.xml','utf8');assert.equal((sitemap.match(/<loc>/g)||[]).length,10);
 assert.ok(fs.readFileSync('robots.txt','utf8').includes('Sitemap: https://www.aqlfisio.com/sitemap.xml'));
 console.log('SEO checks passed: six complete HTML pages, unique metadata, canonical URLs, structured data, plans, purchase links, sitemap and robots.');

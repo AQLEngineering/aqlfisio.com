@@ -9,7 +9,7 @@ git clone --depth 1 --branch main --single-branch https://github.com/AQLEngineer
 node "$project_dir/stage-seo.cjs" "$deploy_dir/site"
 cd "$deploy_dir/site"
 baseline_sha="$(git rev-parse HEAD)"
-git add index.html assets/index-fisio-campaign-20261022.js assets/fisio-seo-20261101.css website-version.txt robots.txt sitemap.xml agenda-clinica processo-clinico exercicios-terapeuticos automacoes lia tools/seo
+git add index.html assets/index-fisio-campaign-20261022.js assets/fisio-seo-20261101.css website-version.txt robots.txt sitemap.xml .github/workflows/close-adoption-campaign.yml agenda-clinica processo-clinico exercicios-terapeuticos automacoes lia tools/seo
 if git diff --cached --quiet; then
   echo 'Esta versão já se encontra publicada no repositório.'
   exit 0
@@ -20,6 +20,6 @@ if [[ "$(git rev-parse origin/main)" != "$baseline_sha" ]]; then
   echo 'O site mudou durante a preparação. Nada foi publicado. Reveja a versão mais recente.' >&2
   exit 1
 fi
-git commit -m 'Website 2026.11.01.1: prerender content and add feature pages, metadata and sitemap'
+git commit -m 'Website 2026.11.01.2: adoption campaign and unlimited patient records'
 git push origin HEAD:main
 echo 'Publicação enviada para https://www.aqlfisio.com/.'
