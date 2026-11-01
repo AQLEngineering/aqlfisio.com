@@ -3,7 +3,7 @@ const source=__dirname,target=path.resolve(process.argv[2]||'');assert.ok(proces
 const desired=fs.readFileSync(path.join(source,'website-version.txt'),'utf8').trim();
 const previous=fs.readFileSync(path.join(target,'website-version.txt'),'utf8').trim();
 const parts=v=>v.split('.').map(Number);for(let i=0;i<4;i++){const a=parts(desired)[i]||0,b=parts(previous)[i]||0;if(a>b)break;if(a<b)throw Error('Refusing to downgrade the public website');}
-const files=['index.html','robots.txt','sitemap.xml','website-version.txt','assets/fisio-seo-20261101.css','.github/workflows/close-adoption-campaign.yml',...JSON.parse(fs.readFileSync(path.join(source,'seo-pages.json'),'utf8')).map(p=>p.slug+'/index.html')];
+const files=['index.html','robots.txt','sitemap.xml','website-version.txt','assets/fisio-seo-20261101.css','assets/lia/lia-demo-crop.mp4','assets/lia/lia-demo-crop-poster.jpg','.github/workflows/close-adoption-campaign.yml',...JSON.parse(fs.readFileSync(path.join(source,'seo-pages.json'),'utf8')).map(p=>p.slug+'/index.html')];
 for(const file of files){if(file.startsWith('.github/')&&!fs.existsSync(path.join(source,file)))continue;fs.mkdirSync(path.dirname(path.join(target,file)),{recursive:true});fs.copyFileSync(path.join(source,file),path.join(target,file));}
 fs.copyFileSync(path.join(source,'index.js'),path.join(target,'assets/index-fisio-campaign-20261022.js'));
 // Keep the static renderer and its inputs versioned with the published site.

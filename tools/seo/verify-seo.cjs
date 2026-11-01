@@ -13,7 +13,7 @@ for(const file of ['index.html',...pages.map(p=>p.slug+'/index.html')]){
  assert.equal(graph['@context'],'https://schema.org');assert.ok(graph['@graph'].some(e=>e['@type']==='WebPage'));
  for(const page of pages)assert.ok(html.includes(`href="/${page.slug}/"`),`${file}: ${page.slug} discoverable`);
  assert.ok(!html.includes('href="#" class="text-sm text-slate-400'),'Legal footer links must resolve');
- assert.ok(!/<video\b/.test(html),'Do not reintroduce the removed video');
+ assert.ok(!/<video[^>]*class="move-demo-video"/.test(html) && !html.includes('Afonso'), 'Keep the removed patient recording off the website');
 }
 const vm=require('node:vm');const bundle=fs.readFileSync('index.js','utf8');const helper=bundle.slice(bundle.indexOf('function aqlCampaignActive('),bundle.indexOf('const aqlCampaignPrices='));const campaign=vm.runInNewContext(helper+';aqlCampaignActive');assert.equal(campaign(new Date('2026-12-31T23:59:59Z')),true);assert.equal(campaign(new Date('2027-01-01T00:00:00Z')),false);
 const home=fs.readFileSync('index.html','utf8');
@@ -25,3 +25,7 @@ assert.deepEqual(app.offers.map(o=>o.price),new Date()<new Date('2027-01-01T00:0
 const sitemap=fs.readFileSync('sitemap.xml','utf8');assert.equal((sitemap.match(/<loc>/g)||[]).length,10);
 assert.ok(fs.readFileSync('robots.txt','utf8').includes('Sitemap: https://www.aqlfisio.com/sitemap.xml'));
 console.log('SEO checks passed: six complete HTML pages, unique metadata, canonical URLs, structured data, plans, purchase links, sitemap and robots.');
+
+assert.ok(home.includes('class="lia-demo-player"')&&home.includes('preload="none"'));
+assert.ok(home.includes('dados fictícios')&&home.includes('/assets/lia/lia-demo-crop.mp4'));
+for(const asset of ['assets/lia/lia-demo-crop.mp4','assets/lia/lia-demo-crop-poster.jpg']) assert.ok(fs.statSync(asset).size>1000);
