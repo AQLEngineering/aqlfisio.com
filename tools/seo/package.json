@@ -1,7 +1,7 @@
 {
   "name": "aqlfisio-commercial-website",
   "private": true,
-  "version": "2026.11.2",
+  "version": "2026.11.3",
   "type": "module",
   "scripts": {
     "build:seo": "node build-seo.cjs",
