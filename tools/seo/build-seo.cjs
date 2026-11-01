@@ -69,7 +69,7 @@ ${metadata(page.title,page.description,url,graph(page.title,page.description,url
     const modified='2026-11-01';
     const urls=[{path:'/',modified},...pages.map(p=>({path:'/'+p.slug+'/',modified})),...['identificacao','termos','privacidade','reclamacoes'].map(p=>({path:'/'+p+'/'}))];
     put('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls.map(u=>`  <url><loc>${base+u.path}</loc>${u.modified?`<lastmod>${u.modified}</lastmod>`:''}</url>`).join('\n')+'\n</urlset>\n');
-    put('robots.txt',`User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap.xml\n`);
+    put('robots.txt',`User-agent: *\nAllow: /\nDisallow: /tools/\n\nSitemap: ${base}/sitemap.xml\n`);
     put('website-version.txt',version+'\n');
     console.log(`Website ${version}: prerendered homepage (${rendered.length} characters), ${pages.length} feature pages, robots and sitemap generated.`);
   }finally{fs.rmSync(tmp,{recursive:true,force:true});}

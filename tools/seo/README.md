@@ -9,7 +9,7 @@ Commercial site at https://www.aqlfisio.com/, published through `AQLEngineering/
 - JSON-LD Organization, WebSite, WebPage, SoftwareApplication and feature-page breadcrumbs. Monthly advertised prices are net of VAT; no invented ratings or reviews.
 - Five static, responsive pages: `/agenda-clinica/`, `/processo-clinico/`, `/exercicios-terapeuticos/`, `/automacoes/`, `/lia/`.
 - Footer links make the feature pages discoverable. Existing privacy/terms links now resolve to the legal pages.
-- `robots.txt` allows crawling and declares `sitemap.xml`. Sitemap lists the homepage, five feature pages and four existing legal pages; unchanged legal pages have no fabricated modification date.
+- `robots.txt` allows public-page crawling, excludes build tools and declares `sitemap.xml`. Sitemap lists the homepage, five feature pages and four existing legal pages; unchanged legal pages have no fabricated modification date.
 - Plans, purchase registration links and the existing 30-minute Calendly event preserved. Included clinic storage now matches the application (1024 MB, optional 5/10 GB).
 - No clinical demonstration video was reintroduced.
 
