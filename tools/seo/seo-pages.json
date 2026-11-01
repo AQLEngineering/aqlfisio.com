@@ -1,0 +1,167 @@
+[
+  {
+    "slug": "agenda-clinica",
+    "label": "Agenda clínica",
+    "title": "Agenda para Clínicas de Fisioterapia | AQL Fisio",
+    "h1": "Uma agenda clínica que acompanha o ritmo da sua equipa.",
+    "description": "Organize marcações, profissionais e salas da sua clínica de fisioterapia com a agenda AQL Fisio. Consulte horários e acompanhe o dia num só lugar.",
+    "intro": "Numa clínica de fisioterapia, organizar o dia implica conciliar utentes, profissionais, tratamentos e salas. A agenda do AQL Fisio reúne essa informação para ajudar a receção e a equipa clínica a preparar cada consulta.",
+    "sections": [
+      [
+        "Veja o dia com o contexto necessário",
+        "Consulte as marcações e filtre a agenda por profissional, utente, tratamento, sala ou estado. As vistas da agenda ajudam a perceber a distribuição das consultas e a encontrar o período que precisa de rever. A identificação visual dos profissionais e dos tratamentos facilita a leitura de um dia preenchido."
+      ],
+      [
+        "Organize marcações e alterações",
+        "Crie uma marcação com o utente, o profissional e o tratamento associados. Quando os horários mudam, pode ajustar as consultas na agenda e consultar a disponibilidade antes de confirmar. A gestão das salas e a validação de conflitos ajudam a evitar sobreposições na organização da clínica."
+      ],
+      [
+        "Dê à receção o acesso de que precisa",
+        "A receção pode apoiar a organização das marcações sem receber acesso ao conteúdo clínico. Os profissionais trabalham com as consultas e os utentes associados ao seu acesso, enquanto a administração acompanha a organização da clínica. As permissões permitem distribuir tarefas sem partilhar todos os registos com toda a equipa."
+      ]
+    ],
+    "plan": "A agenda e a gestão de marcações estão incluídas desde o plano Gabinete. Compare os planos para escolher a capacidade e os módulos adequados à sua clínica.",
+    "faq": [
+      [
+        "A receção precisa de uma licença de profissional?",
+        "Os utilizadores exclusivamente de receção ou administrativos são gratuitos. A capacidade de profissionais depende do plano e dos profissionais adicionais contratados."
+      ],
+      [
+        "Posso conhecer a agenda antes de comprar?",
+        "Pode experimentar a demonstração com dados fictícios na aplicação ou agendar uma apresentação de 30 minutos adaptada à sua clínica."
+      ]
+    ]
+  },
+  {
+    "slug": "processo-clinico",
+    "label": "Processo clínico",
+    "title": "Processo Clínico de Fisioterapia | AQL Fisio",
+    "h1": "O percurso do utente, organizado entre consultas.",
+    "description": "Organize o processo clínico de fisioterapia com registos de consultas, episódios, objetivos e documentos. Acompanhe a evolução do utente no AQL Fisio.",
+    "intro": "O processo clínico dá continuidade ao trabalho realizado em cada consulta. No AQL Fisio, os registos do utente ajudam o profissional a rever o contexto disponível, documentar a sessão e acompanhar a evolução ao longo do tratamento.",
+    "sections": [
+      [
+        "Ligue a consulta ao histórico",
+        "Reúna os registos de consultas e consulte o histórico associado ao utente. A organização por episódios clínicos e objetivos ajuda a distinguir os diferentes percursos terapêuticos e a rever o que foi avaliado e realizado. A informação disponível apoia a preparação da consulta seguinte, sem substituir a avaliação do fisioterapeuta."
+      ],
+      [
+        "Documente o trabalho clínico",
+        "Registe as observações e o trabalho realizado na sessão. As ferramentas de documentação e o mapa corporal apoiam o registo do contexto clínico. Pode associar documentos e fotografias quando forem pertinentes para o acompanhamento, respeitando as permissões de acesso e os consentimentos aplicáveis."
+      ],
+      [
+        "Acompanhe a evolução com acesso adequado",
+        "Rever sessões anteriores permite relacionar avaliações, intervenções e objetivos. Os profissionais acedem aos registos associados ao seu âmbito de trabalho e a gestão clínica dispõe dos acessos correspondentes ao seu papel. A receção não recebe acesso às notas e aos conteúdos do painel clínico."
+      ]
+    ],
+    "plan": "Os registos de utentes e consultas estão disponíveis desde o Gabinete. Consulte os planos para comparar as ferramentas e módulos incluídos em cada opção.",
+    "faq": [
+      [
+        "O processo clínico fica acessível à receção?",
+        "O perfil de receção permite gerir a agenda, mas não dá acesso às notas clínicas nem ao painel clínico do utente."
+      ],
+      [
+        "As fotografias e os documentos ocupam espaço?",
+        "Sim. Todos os planos incluem 1024 MB por clínica para ficheiros próprios. Pode consultar a ocupação e adicionar capacidade em Plano e consumos."
+      ]
+    ]
+  },
+  {
+    "slug": "exercicios-terapeuticos",
+    "label": "Exercícios terapêuticos",
+    "title": "Exercícios Terapêuticos e Acompanhamento | AQL Fisio",
+    "h1": "O plano de exercícios continua para lá da consulta.",
+    "description": "Prescreva exercícios terapêuticos e acompanhe o trabalho entre sessões com AQL Exercise e AQL Home. Programas adaptados a cada utente.",
+    "intro": "O exercício entre sessões faz parte de muitos percursos de fisioterapia. AQL Exercise e AQL Home ligam a prescrição ao acompanhamento, para que o profissional possa organizar um programa e rever a execução e as dificuldades com o utente.",
+    "sections": [
+      [
+        "Prepare um programa para cada utente",
+        "Selecione os exercícios e organize as indicações para o programa terapêutico. O catálogo ajuda a estruturar a prescrição e a apresentar o trabalho proposto. O plano deve ser adaptado e validado pelo fisioterapeuta de acordo com a avaliação, os objetivos e a situação de cada pessoa."
+      ],
+      [
+        "Mantenha a ligação entre sessões",
+        "O acompanhamento em casa permite dar continuidade ao programa fora da clínica. A informação sobre a execução e a aderência ajuda o profissional a identificar pontos a rever na consulta seguinte. As dificuldades e os registos disponíveis devem ser interpretados no contexto do acompanhamento clínico."
+      ],
+      [
+        "Use os seus vídeos sem duplicar ficheiros",
+        "Pode associar vídeos aos exercícios para apoiar a compreensão das instruções. Os vídeos próprios guardados ocupam espaço da clínica uma única vez, mesmo quando são usados em várias prescrições. O catálogo partilhado AQL não é contabilizado como armazenamento próprio da clínica."
+      ]
+    ],
+    "plan": "AQL Exercise e AQL Home estão incluídos nos planos Care e Intelligence. A contratação como módulos adicionais nos outros planos está sujeita às condições e dependências apresentadas antes da ativação.",
+    "faq": [
+      [
+        "O Care e o Intelligence têm limites de acompanhamento?",
+        "O Care inclui até 250 utentes ativos em acompanhamento e o Intelligence até 500. Consulte as condições para capacidade adicional."
+      ],
+      [
+        "Os exercícios substituem a consulta de fisioterapia?",
+        "Não. O programa é definido e revisto pelo profissional e integra o acompanhamento terapêutico; não substitui a avaliação clínica."
+      ]
+    ]
+  },
+  {
+    "slug": "automacoes",
+    "label": "Automações",
+    "title": "Automações para Clínicas de Fisioterapia | AQL Fisio",
+    "h1": "Dê continuidade às tarefas sem perder o controlo.",
+    "description": "Organize regras de seguimento e tarefas da clínica com as automações do AQL Fisio. Defina condições, acompanhe ações e reduza trabalho repetido.",
+    "intro": "Uma clínica repete muitas tarefas de organização e seguimento. As automações do AQL Fisio permitem definir regras para apoiar esse trabalho e acompanhar as ações que precisam de atenção da equipa.",
+    "sections": [
+      [
+        "Defina quando uma ação deve acontecer",
+        "As regras relacionam condições com ações de acompanhamento. Em vez de depender apenas da memória da equipa, pode organizar o que deve ser desencadeado quando as condições configuradas forem cumpridas. Antes de ativar uma regra, reveja os destinatários, o momento e o efeito pretendido."
+      ],
+      [
+        "Acompanhe o trabalho da equipa",
+        "O centro de tarefas ajuda a reunir assuntos pendentes e a organizar o seguimento. A equipa consegue consultar o que precisa de atenção e acompanhar o trabalho associado à clínica. A configuração deve refletir os procedimentos reais da unidade, para evitar ações desnecessárias ou repetidas."
+      ],
+      [
+        "Mantenha as comunicações sob controlo",
+        "Uma automação não deve significar enviar mais mensagens sem critério. Quando uma ação utiliza um canal de comunicação, aplicam-se as condições desse canal, as permissões e os consentimentos adequados. As SMS e os créditos de utilização são adquiridos separadamente quando aplicável; não são ilimitados por ativar automações."
+      ]
+    ],
+    "plan": "As automações de seguimento estão incluídas nos planos Care e Intelligence. Nos restantes planos, podem ser contratadas como módulo adicional, mediante apresentação das condições.",
+    "faq": [
+      [
+        "As automações vêm incluídas em todos os planos?",
+        "Não. Estão incluídas no Care e no Intelligence. Os outros planos permitem acrescentar módulos mediante contratação."
+      ],
+      [
+        "As SMS estão incluídas no preço das automações?",
+        "Não. As comunicações por SMS têm consumos e condições próprios, consultáveis em Plano e consumos."
+      ]
+    ]
+  },
+  {
+    "slug": "lia",
+    "label": "LIA",
+    "title": "LIA: Assistente de IA para Fisioterapia | AQL Fisio",
+    "h1": "Mais contexto para preparar. Mais apoio para documentar.",
+    "description": "Conheça a LIA, assistente de inteligência artificial do AQL Fisio para preparar consultas e apoiar notas, resumos e relatórios com validação clínica.",
+    "intro": "A LIA é a assistente de inteligência artificial do AQL Fisio. Apoia a organização da informação disponível, a preparação de consultas e a criação de rascunhos de documentação, mantendo o fisioterapeuta responsável pela revisão e decisão.",
+    "sections": [
+      [
+        "Prepare a próxima consulta com contexto",
+        "Peça apoio para reunir o histórico e os pontos relevantes dos registos disponíveis. A LIA ajuda a relacionar sessões, objetivos e evolução registada, para facilitar a preparação. A resposta depende da informação existente e deve assinalar quando falta contexto para responder com segurança."
+      ],
+      [
+        "Crie rascunhos e reveja antes de guardar",
+        "Use a LIA como apoio à redação de notas, resumos e relatórios a partir do contexto disponível. O resultado é um rascunho: confirme a informação, ajuste a linguagem e valide o conteúdo antes de o utilizar. A assistente não substitui a avaliação, o diagnóstico nem a decisão clínica do profissional."
+      ],
+      [
+        "Acompanhe a utilização e os créditos",
+        "Os pedidos online concluídos usam os créditos LIA segundo as condições contratadas. Pode consultar os consumos e comprar créditos adicionais em Plano e consumos. As respostas locais e os pedidos falhados não gastam créditos. Os saldos da LIA e das SMS são independentes, para que seja claro o que cada serviço utiliza."
+      ]
+    ],
+    "plan": "A LIA está incluída no Intelligence e pode ser contratada como módulo adicional nos restantes planos, mediante condições. A utilização está sujeita aos créditos disponíveis.",
+    "faq": [
+      [
+        "A LIA decide o tratamento do utente?",
+        "Não. A LIA apoia a organização e a documentação. O fisioterapeuta revê, valida e decide."
+      ],
+      [
+        "Posso ver a LIA antes de escolher um plano?",
+        "Pode agendar uma apresentação de 30 minutos para conhecer o funcionamento e as condições de utilização da LIA."
+      ]
+    ]
+  }
+]

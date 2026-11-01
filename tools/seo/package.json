@@ -1,0 +1,8 @@
+{
+  "name": "aqlfisio-commercial-website",
+  "private": true,
+  "version": "2026.11.1",
+  "type": "module",
+  "scripts": { "build:seo": "node build-seo.cjs", "check": "node --check index.js && node verify-seo.cjs" },
+  "devDependencies": { "react": "18.2.0", "react-dom": "18.2.0" }
+}
