@@ -48,3 +48,9 @@ The site uses date-aware cards and offers and retains the regular prices as refe
 ## 2026.11.01.3 — continuidade no hero
 
 A frase «A clínica não termina quando o utente sai pela porta.» abre a homepage, com descrição explícita do software imediatamente abaixo. Título SEO, metadados, preços e ações existentes preservados. Secção de acompanhamento entre consultas com título próprio para evitar repetição.
+
+## 2026.11.03.1 — LIA e automações interativas
+
+A homepage apresenta uma experiência ilustrativa interativa entre a demonstração LIA e os planos: três separadores (LIA, seguimento automático e construtor Quando/Então), resumo clínico fictício, eventos simulados no centro de tarefas, simulação de regra configurável e CTA Calendly. Nenhum dado é enviado à aplicação e nenhuma regra real é criada.
+
+Os ficheiros independentes `assets/aql-smart-demo-20261103.css` e `assets/aql-smart-demo-20261103.js` preservam o site React atual. A secção é incluída no HTML pré-renderizado e restaurada após o React montar, a partir de um template inerte exterior ao root. `build-seo.cjs` e `stage-seo.cjs` incluem os novos recursos; `verify-seo.cjs` verifica integração, visibilidade, acessibilidade básica e CSS responsivo. Confirmar QA em browser e funcionamento do GitHub Pages antes de anunciar publicação.

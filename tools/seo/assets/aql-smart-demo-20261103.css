@@ -1,0 +1,64 @@
+/* AQL Fisio interactive demonstration — isolated from the React landing page */
+.aql-smart-demo{--sd-navy:#102f42;--sd-teal:#087f88;--sd-muted:#627a87;--sd-line:#dcebe9;isolation:isolate;position:relative;overflow:hidden;padding:clamp(64px,8vw,118px) 24px;background:linear-gradient(135deg,#eaf9f8 0%,#f7fbfc 52%,#f1f6fd 100%);color:var(--sd-navy);font-family:Manrope,Arial,sans-serif;scroll-margin-top:95px}
+.aql-smart-demo *{box-sizing:border-box}
+.aql-smart-demo:before,.aql-smart-demo:after{content:"";position:absolute;pointer-events:none;border-radius:50%;filter:blur(70px);z-index:-1}
+.aql-smart-demo:before{width:420px;height:420px;top:-230px;right:-130px;background:#a4e3dc66}
+.aql-smart-demo:after{width:300px;height:300px;bottom:-180px;left:-100px;background:#bfd8f766}
+.aql-sd-container{max-width:1190px;margin:0 auto}
+.aql-sd-intro{max-width:780px;margin:0 0 34px}
+.aql-sd-eyebrow{font-size:12px!important;font-weight:800;letter-spacing:.14em;color:#07838d;margin:0 0 15px!important}
+.aql-sd-intro h2{font-size:clamp(38px,5vw,60px);letter-spacing:-.055em;line-height:1.08;font-weight:800;margin:0 0 21px;color:#092b3e}
+.aql-sd-intro h2 span{color:#079b9e}
+.aql-sd-intro>p:last-child{font-size:clamp(15px,1.4vw,18px);color:#536f7f;line-height:1.7;max-width:650px}
+.aql-sd-panel{position:relative;padding:clamp(18px,2.8vw,34px);background:#ffffffc9;border:1px solid #dceaea;border-radius:28px;box-shadow:0 30px 90px #1b677818;backdrop-filter:blur(12px)}
+.aql-sd-tabs{display:flex;gap:5px;width:fit-content;max-width:100%;padding:5px;border:1px solid #e0eaeb;border-radius:15px;background:#f1f8f8}
+.aql-sd-tab{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:45px;padding:11px 20px;border:0;border-radius:11px;background:transparent;color:#56717b;font:800 13px/1.2 Manrope,Arial,sans-serif;white-space:nowrap;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.aql-sd-tab.is-active{background:#087f88;color:white;box-shadow:0 5px 15px #087f8830}
+.aql-sd-tab:not(.is-active):hover{background:white;color:#075e6b}
+.aql-smart-demo button:focus-visible,.aql-smart-demo a:focus-visible,.aql-smart-demo select:focus-visible{outline:3px solid #14a9b6;outline-offset:3px}
+.aql-sd-layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:center;gap:clamp(22px,4vw,66px);margin-top:26px}
+.aql-sd-pitch{padding:18px 8px 22px 0}
+.aql-sd-kicker{display:inline-block;padding:9px 14px;border-radius:100px;background:#dbf4ee;color:#0f7977;font-size:11px;font-weight:800}
+.aql-sd-pitch h3{font-size:clamp(28px,3vw,40px);font-weight:800;letter-spacing:-.048em;line-height:1.16;margin:22px 0 18px;color:#0b3042}
+.aql-sd-pitch>p{font-size:15px;line-height:1.85;color:#546f7c;margin:0}
+.aql-sd-benefits{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+.aql-sd-benefits span{display:inline-flex;align-items:center;font-size:11px;font-weight:750;line-height:1.3;padding:10px 12px;border-radius:20px;border:1px solid #d8e8e7;background:white;color:#416772}
+.aql-sd-benefits span:before{content:"✓";display:inline-block;margin-right:7px;color:#168b83}
+.aql-sd-app{background:#fff;border:1px solid #d7e5e7;border-radius:22px;box-shadow:0 23px 60px #174e5a20;overflow:hidden;min-height:376px}
+.aql-sd-appbar{height:59px;padding:0 20px;border-bottom:1px solid #edf1f4;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.aql-sd-brand{font-weight:800;letter-spacing:-.045em;font-size:19px;color:#183a4b;white-space:nowrap}
+.aql-sd-brand>span:first-child{color:#16a8b2}
+.aql-sd-appname{font-size:10px;color:#718994;letter-spacing:0;font-weight:600}
+.aql-sd-simflag{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#19745f;background:#e9f8ef;border-radius:30px;font-size:10px;font-weight:800;padding:8px 11px}
+.aql-sd-simflag i{width:7px;height:7px;background:#29b98b;border-radius:50%;box-shadow:0 0 0 3px #29b98b20}
+.aql-sd-screen{padding:22px;min-height:316px}
+.aql-sd-screen-label{font-size:10px!important;letter-spacing:.12em;font-weight:800;color:#8297a2;margin:0 0 18px!important}
+.aql-sd-message{font-size:13px;line-height:1.65;padding:13px 16px;border-radius:15px;max-width:93%;margin-bottom:13px}
+.aql-sd-from-user{background:#e5f6f4;color:#17515b;margin-left:auto;border-bottom-right-radius:4px}
+.aql-sd-from-lia{background:#f4f7f9;border:1px solid #e9eff2;color:#3c5a69;border-bottom-left-radius:4px}
+.aql-sd-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:43px;padding:12px 17px;border:0;border-radius:11px;background:#087f88;color:#fff;font:800 12px/1.3 Manrope,Arial,sans-serif;cursor:pointer;transition:transform .2s,background .2s}
+.aql-sd-action:hover{background:#075d69;transform:translateY(-2px)}
+.aql-sd-result{border:1px solid #c8e8dd;background:#f0fbf7;padding:16px;border-radius:14px;margin-top:15px;animation:aql-sd-pop .3s ease}
+.aql-sd-result strong{display:block;color:#167363;font-size:13px;margin-bottom:7px}
+.aql-sd-result p{font-size:12px;line-height:1.7;color:#3e6671;margin:6px 0}
+.aql-sd-disclaimer{display:block;margin-top:10px;padding-top:12px;border-top:1px solid #d8eae3;font-size:11px;font-weight:750;color:#217c70}
+.aql-sd-task{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #e4eded;border-radius:12px;padding:14px;margin-bottom:10px;background:#fff;animation:aql-sd-pop .28s ease}
+.aql-sd-task strong{font-size:12px;color:#284e5e;display:block}
+.aql-sd-task small{display:block;font-size:11px;color:#718795;line-height:1.5;margin-top:4px}
+.aql-sd-pill{font-size:10px;font-weight:800;color:#167868;background:#e4f6ed;padding:8px 10px;border-radius:30px;white-space:nowrap}
+.aql-sd-builder{border:1px solid #deeeeb;background:#f5fafb;border-radius:16px;padding:19px}
+.aql-sd-label{display:block;font-size:10px;font-weight:800;letter-spacing:.09em;color:#14858a;margin-bottom:8px}
+.aql-sd-select{width:100%;min-height:44px;padding:10px 12px;margin-bottom:18px;border:1px solid #d4e4e3;border-radius:10px;color:#294c5b;background:white;font:700 12px Manrope,Arial,sans-serif;cursor:pointer}
+.aql-sd-builder .aql-sd-action{width:100%}
+.aql-sd-bottom{border-top:1px solid #ddeaea;margin-top:31px;padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.aql-sd-note{display:grid;gap:4px;max-width:520px}
+.aql-sd-note strong{font-size:13px;color:#214552}
+.aql-sd-note span{font-size:11px;line-height:1.6;color:#69818a}
+.aql-sd-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:17px}
+.aql-sd-see{font-size:12px;font-weight:800;color:#087f88;text-underline-offset:4px;text-decoration:underline}
+.aql-sd-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#0c3246;color:#fff!important;text-decoration:none!important;border-radius:11px;min-height:48px;padding:13px 20px;font-size:12px;font-weight:800;box-shadow:0 8px 16px #082f4430;transition:transform .2s,background .2s}
+.aql-sd-primary:hover{background:#124d61;transform:translateY(-2px)}
+@keyframes aql-sd-pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.aql-sd-layout{grid-template-columns:1fr;gap:15px}.aql-sd-pitch{padding:8px 2px 0}.aql-sd-pitch h3{font-size:30px}.aql-sd-app{min-height:320px}.aql-sd-bottom{align-items:flex-start;flex-direction:column}.aql-sd-ctas{width:100%}}
+@media(max-width:600px){.aql-smart-demo{padding:64px 16px}.aql-sd-intro h2{font-size:38px}.aql-sd-panel{padding:13px;border-radius:19px}.aql-sd-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:3px;padding:4px}.aql-sd-tab{font-size:11px;padding:11px 4px;white-space:normal;min-height:52px;gap:3px}.aql-sd-pitch h3{font-size:27px}.aql-sd-pitch>p{font-size:13px}.aql-sd-appbar{padding:0 12px}.aql-sd-appname{display:none}.aql-sd-screen{padding:14px;min-height:296px}.aql-sd-message{font-size:11px;padding:12px}.aql-sd-ctas{align-items:stretch;flex-direction:column}.aql-sd-primary{width:100%}.aql-sd-task{padding:10px}.aql-sd-task strong{font-size:11px}.aql-sd-pill{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.aql-smart-demo *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
