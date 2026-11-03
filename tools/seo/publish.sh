@@ -20,6 +20,6 @@ if [[ "$(git rev-parse origin/main)" != "$baseline_sha" ]]; then
   echo 'O site mudou durante a preparação. Nada foi publicado. Reveja a versão mais recente.' >&2
   exit 1
 fi
-git commit -m 'Website 2026.11.03.1: showcase LIA Actions and human-approved follow-up'
+git commit -m 'Website 2026.11.03.2: showcase LIA Actions and human-approved follow-up'
 git push origin HEAD:main
 echo 'Publicação enviada para https://www.aqlfisio.com/.'

@@ -52,3 +52,7 @@ A frase «A clínica não termina quando o utente sai pela porta.» abre a homep
 ## 2026.11.03.1 — LIA Actions
 
 Destaque na página principal e navegação desktop/mobile para recuperação de consultas canceladas. Exemplo interativo com dados fictícios, três horários ilustrativos e aprovação de uma tarefa de exemplo. O contacto e o reagendamento mantêm-se manuais. A funcionalidade real está nas tarefas da receção do AQL Fisio 1.15.216, em clínicas com o módulo de automações ativo.
+
+### 2026.11.03.2
+
+Espaçamento do título em mobile e indicação do acesso pelo centro de tarefas, com automações ativas.
