@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{pathToFileURL}=require('node:url');
-const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.01.5';
+const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.03.1';
 const pages=JSON.parse(fs.readFileSync(path.join(root,'seo-pages.json'),'utf8'));
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
@@ -44,6 +44,11 @@ async function build(){
     let template=fs.readFileSync(path.join(root,'homepage.template.html'),'utf8').replace('<html lang="pt">','<html lang="pt-PT">');
     template=template.replace(/<title>[^<]*<\/title>/,metadata(homeTitle,homeDescription,base+'/',graph(homeTitle,homeDescription,base+'/',[software])));
     template=template.replace('2026.10.31.7',version).replace('v=20261031.7','v='+version.replaceAll('.',''));
+    // Keep this SEO-visible before hydration; the companion script restores it after React mounts.
+    const smartDemo=fs.readFileSync(path.join(root,'smart-demo.section.html'),'utf8');
+    const pricingMarker='<section id="pricing"';
+    if(!rendered.includes(pricingMarker))throw new Error('Pricing anchor missing: review interactive demo placement.');
+    rendered=rendered.replace(pricingMarker,smartDemo+pricingMarker);
     template=template.replace('<div id="root"></div>','<div id="root">'+rendered+'</div>');
     put('index.html',template);
     const footer=template.match(/<footer id="aql-legal-footer"[\s\S]*?<\/footer>/)[0];
