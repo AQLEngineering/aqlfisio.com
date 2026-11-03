@@ -48,3 +48,7 @@ The site uses date-aware cards and offers and retains the regular prices as refe
 ## 2026.11.01.3 — continuidade no hero
 
 A frase «A clínica não termina quando o utente sai pela porta.» abre a homepage, com descrição explícita do software imediatamente abaixo. Título SEO, metadados, preços e ações existentes preservados. Secção de acompanhamento entre consultas com título próprio para evitar repetição.
+
+## 2026.11.03.1 — LIA Actions
+
+Destaque na página principal e navegação desktop/mobile para recuperação de consultas canceladas. Exemplo interativo com dados fictícios, três horários ilustrativos e aprovação de uma tarefa de exemplo. O contacto e o reagendamento mantêm-se manuais. A funcionalidade real está nas tarefas da receção do AQL Fisio 1.15.216, em clínicas com o módulo de automações ativo.

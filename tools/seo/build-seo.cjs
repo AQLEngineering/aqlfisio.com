@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{pathToFileURL}=require('node:url');
-const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.01.5';
+const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.03.1';
 const pages=JSON.parse(fs.readFileSync(path.join(root,'seo-pages.json'),'utf8'));
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
@@ -68,7 +68,7 @@ ${metadata(page.title,page.description,url,graph(page.title,page.description,url
 <section class="demo-cta"><p class="eyebrow">Apresentação online · 30 minutos</p><h2>Veja o AQL Fisio na prática.</h2><p>Conheça a plataforma e esclareça como se adapta ao seu gabinete ou clínica.</p><div class="actions"><a class="button" href="https://calendly.com/alberto-moreira-aqlengineering/30min">Agendar apresentação</a><a class="button secondary" href="https://aqlapps.com/fisio/?signup=1">Registar clínica</a></div></section>
 </div></main>${footer}</body></html>`);
     }
-    const modified=process.env.AQL_SITE_MODIFIED||'2026-11-01';
+    const modified=process.env.AQL_SITE_MODIFIED||'2026-11-03';
     const urls=[{path:'/',modified},...pages.map(p=>({path:'/'+p.slug+'/',modified})),...['identificacao','termos','privacidade','reclamacoes'].map(p=>({path:'/'+p+'/'}))];
     put('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls.map(u=>`  <url><loc>${base+u.path}</loc>${u.modified?`<lastmod>${u.modified}</lastmod>`:''}</url>`).join('\n')+'\n</urlset>\n');
     put('robots.txt',`User-agent: *\nAllow: /\nDisallow: /tools/\n\nSitemap: ${base}/sitemap.xml\n`);

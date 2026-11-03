@@ -28,4 +28,8 @@ console.log('SEO checks passed: six complete HTML pages, unique metadata, canoni
 
 assert.ok(home.includes('class="lia-demo-player"')&&home.includes('preload="none"'));
 assert.ok(home.includes('dados fictícios')&&home.includes('/assets/lia/lia-demo-crop.mp4'));
-for(const asset of ['assets/lia/lia-demo-crop.mp4','assets/lia/lia-demo-crop-poster.jpg']) assert.ok(fs.statSync(asset).size>1000);
+for(const asset of ['assets/lia/lia-demo-crop.mp4','assets/lia/lia-demo-crop-poster.jpg']) assert.ok(fs.statSync(fs.existsSync(asset)?asset:require('node:path').resolve(__dirname,'../..',asset)).size>1000);
+
+assert.ok(home.includes('id="lia-actions"')&&home.includes('href="#lia-actions"'),'LIA Actions is present and discoverable');
+for(const text of ['Aprovar tarefa de exemplo','Dados fictícios','o contacto e o reagendamento são manuais'])assert.ok(home.includes(text),text);
+assert.ok(!/fetch\s*\(/.test(fs.readFileSync('lia-actions-demo.js','utf8')),'The website demo must not call external services');
