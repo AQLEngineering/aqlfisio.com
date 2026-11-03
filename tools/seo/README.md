@@ -56,3 +56,7 @@ Destaque na página principal e navegação desktop/mobile para recuperação de
 ### 2026.11.03.2
 
 Espaçamento do título em mobile e indicação do acesso pelo centro de tarefas, com automações ativas.
+
+## 2026.11.03.3 — conversa animada da LIA
+
+O vídeo foi substituído por um painel animado com o aspeto da LIA: cabeçalho azul, conversa, indicação de preparação da resposta e cartões de agenda, proposta de marcação e resumo clínico. Exemplos com dados fictícios, escolha manual de cenário, pausa/reprodução, respeito por movimento reduzido e pausa fora do ecrã. A demonstração não faz pedidos aos serviços da aplicação.

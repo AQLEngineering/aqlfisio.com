@@ -26,9 +26,10 @@ const sitemap=fs.readFileSync('sitemap.xml','utf8');assert.equal((sitemap.match(
 assert.ok(fs.readFileSync('robots.txt','utf8').includes('Sitemap: https://www.aqlfisio.com/sitemap.xml'));
 console.log('SEO checks passed: six complete HTML pages, unique metadata, canonical URLs, structured data, plans, purchase links, sitemap and robots.');
 
-assert.ok(home.includes('class="lia-demo-player"')&&home.includes('preload="none"'));
-assert.ok(home.includes('dados fictícios')&&home.includes('/assets/lia/lia-demo-crop.mp4'));
-for(const asset of ['assets/lia/lia-demo-crop.mp4','assets/lia/lia-demo-crop-poster.jpg']) assert.ok(fs.statSync(fs.existsSync(asset)?asset:require('node:path').resolve(__dirname,'../..',asset)).size>1000);
+assert.ok(home.includes('data-lia-animation')&&home.includes('Dados fictícios'.toUpperCase()));
+assert.ok(!home.includes('<video')&&!home.includes('/assets/lia/lia-demo-crop.mp4'),'Replace the old video in the rendered page');
+assert.ok(home.includes('data-lia-play')&&home.includes('data-lia-scene="2"'),'The demonstration can be paused and explored');
+assert.ok(!/fetch\s*\(/.test(fs.readFileSync('lia-animation.js','utf8')),'The chat animation must remain browser-local');
 
 assert.ok(home.includes('id="lia-actions"')&&home.includes('href="#lia-actions"'),'LIA Actions is present and discoverable');
 for(const text of ['Aprovar tarefa de exemplo','Dados fictícios','o contacto e o reagendamento são manuais'])assert.ok(home.includes(text),text);
