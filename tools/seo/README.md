@@ -60,3 +60,7 @@ Espaçamento do título em mobile e indicação do acesso pelo centro de tarefas
 ## 2026.11.03.3 — conversa animada da LIA
 
 O vídeo foi substituído por um painel animado com o aspeto da LIA: cabeçalho azul, conversa, indicação de preparação da resposta e cartões de agenda, proposta de marcação e resumo clínico. Exemplos com dados fictícios, escolha manual de cenário, pausa/reprodução, respeito por movimento reduzido e pausa fora do ecrã. A demonstração não faz pedidos aos serviços da aplicação.
+
+## 2026.11.03.4 — mobile e tablet
+
+Cabeçalho compacto, painel de navegação com fundo sobreposto, bloqueio do scroll, fecho com Escape e gestão do foco. Ações alinhadas, menu em tablet até 1180 px, grelhas adaptadas, hero sem sobreposição e exemplos LIA empilhados em ecrãs intermédios.
