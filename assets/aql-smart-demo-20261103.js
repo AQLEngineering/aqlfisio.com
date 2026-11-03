@@ -133,8 +133,34 @@
     const root = document.getElementById("root");
     if (!root) return;
     ensureMounted();
+    function addNavigationLink() {
+      const desktop = document.querySelector('#root nav .hidden.md\\:flex');
+      if (desktop && !desktop.querySelector('[data-sd-nav]')) {
+        const plans = desktop.querySelector('a[href="#pricing"]');
+        if (plans) {
+          const link = plans.cloneNode(true);
+          link.href = '#experimente-aql-fisio';
+          link.setAttribute('data-sd-nav', 'true');
+          link.textContent = 'LIA & Automações';
+          plans.before(link);
+        }
+      }
+      const mobile = document.querySelector('#mobile-navigation');
+      if (mobile && !mobile.querySelector('[data-sd-nav]')) {
+        const plans = mobile.querySelector('a[href="#pricing"]');
+        if (plans) {
+          const link = plans.cloneNode(true);
+          link.href = '#experimente-aql-fisio';
+          link.setAttribute('data-sd-nav', 'true');
+          link.textContent = 'LIA & Automações';
+          plans.before(link);
+        }
+      }
+    }
+    addNavigationLink();
     const observer = new MutationObserver(function () {
       if (!getSection() || !root.contains(getSection())) ensureMounted();
+      addNavigationLink();
     });
     observer.observe(root, {childList:true, subtree:true});
   }
