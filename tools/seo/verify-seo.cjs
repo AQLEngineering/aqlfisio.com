@@ -31,6 +31,13 @@ assert.ok(!home.includes('<video')&&!home.includes('/assets/lia/lia-demo-crop.mp
 assert.ok(home.includes('data-lia-play')&&home.includes('data-lia-scene="2"'),'The demonstration can be paused and explored');
 assert.ok(!/fetch\s*\(/.test(fs.readFileSync('lia-animation.js','utf8')),'The chat animation must remain browser-local');
 
-assert.ok(home.includes('id="lia-actions"')&&home.includes('href="#lia-actions"'),'LIA Actions is present and discoverable');
+assert.ok(home.includes('id="lia-actions"')&&home.includes('href="/#lia-actions"'),'LIA Actions is present and discoverable');
 for(const text of ['Aprovar tarefa de exemplo','Dados fictícios','o contacto e o reagendamento são manuais'])assert.ok(home.includes(text),text);
 assert.ok(!/fetch\s*\(/.test(fs.readFileSync('lia-actions-demo.js','utf8')),'The website demo must not call external services');
+
+for(const file of ['index.html',...pages.map(p=>p.slug+'/index.html')]){
+ const html=fs.readFileSync(file,'utf8');
+ assert.ok(html.includes('class="aql-site-nav"'),file+': shared navigation');
+ assert.ok(html.includes('class="aql-platform-menu"'),file+': platform dropdown');
+ assert.ok(!html.includes('class="site-header"'),file+': no legacy navigation');
+}

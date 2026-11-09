@@ -11,3 +11,18 @@ const tools=path.join(target,'tools/seo');fs.mkdirSync(tools,{recursive:true});
 for(const file of ['build-seo.cjs','verify-seo.cjs','stage-seo.cjs','publish.sh','homepage.template.html','lia-animation.html','lia-animation.js','lia-actions-section.html','lia-actions-demo.js','seo-pages.json','index.js','package.json','package-lock.json','README.md'])fs.copyFileSync(path.join(source,file),path.join(tools,file));
 fs.mkdirSync(path.join(tools,'assets'),{recursive:true});fs.copyFileSync(path.join(source,'assets/responsive-20261103.css'),path.join(tools,'assets/responsive-20261103.css'));fs.copyFileSync(path.join(source,'assets/lia-animation-20261103.css'),path.join(tools,'assets/lia-animation-20261103.css'));fs.copyFileSync(path.join(source,'assets/lia-actions-20261103.css'),path.join(tools,'assets/lia-actions-20261103.css'));fs.copyFileSync(path.join(source,'assets/fisio-seo-20261101.css'),path.join(tools,'assets/fisio-seo-20261101.css'));
 console.log(`Staged website ${desired}; existing assets and legal pages preserved.`);
+
+// Upgrade navigation on the current legal pages without replacing their contents.
+const featureHtml=fs.readFileSync(path.join(source,'agenda-clinica/index.html'),'utf8');
+const navigation=featureHtml.match(/<div id="site-navigation">[\s\S]*?<\/nav><\/div>/)?.[0];
+assert.ok(navigation,'Shared navigation missing');
+for(const slug of ['identificacao','termos','privacidade','reclamacoes']){
+ const file=path.join(target,slug,'index.html');
+ let html=fs.readFileSync(file,'utf8');
+ html=html.replace(/<div id="site-navigation">[\s\S]*?<\/nav><\/div>/,'').replace(/<header\b[^>]*>[\s\S]*?<\/header>/,'');
+ html=html.replace(/<body([^>]*)>/,(match,attributes)=>'<body'+attributes+'>'+navigation);
+ if(!html.includes('class="aql-feature-page"'))html=html.replace('<body>','<body class="aql-feature-page">');
+ html=html.replace(/<meta name="aql-website-version"[^>]*>/,'');
+ html=html.replace('</head>',`<meta name="aql-website-version" content="${desired}"><link rel="stylesheet" href="/assets/responsive-20261103.css?v=${desired}"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><script type="module" src="/assets/index-fisio-campaign-20261022.js?v=${desired}"></script></head>`);
+ fs.writeFileSync(file,html);
+}
