@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{pathToFileURL}=require('node:url');
-const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.09.2';
+const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.09.5';
 const pages=JSON.parse(fs.readFileSync(path.join(root,'seo-pages.json'),'utf8'));
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
@@ -46,6 +46,7 @@ async function build(){
     template=template.replace('2026.10.31.7',version).replace('v=20261031.7','v='+version.replaceAll('.',''));
     template=template.replace('<div id="root"></div>','<div id="root">'+rendered+'</div>');
     template=template.replace('href="/assets/responsive-20261103.css"','href="/assets/responsive-20261103.css?v='+version+'"');
+    template=template.replace('</head>',`<link rel="stylesheet" href="/assets/customer-story-20261109.css?v=${version}"><script type="module" src="/assets/customer-story-20261109.js?v=${version}"></script></head>`);
     put('index.html',template);
     const navigationHtml=renderer.renderToStaticMarkup(getReact().createElement(Navigation)).replace(/href="#([^"]*)"/g,'href="/#$1"').replace('href="/#"','href="/"');
     const navigation='<div id="site-navigation">'+navigationHtml+'</div>';
@@ -54,13 +55,18 @@ async function build(){
     for(const page of pages){
       const url=base+'/'+page.slug+'/';
       const breadcrumbs={'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'AQL Fisio',item:base+'/'},{'@type':'ListItem',position:2,name:page.label,item:url}]};
+      if(page.kind==='customer-story'){
+        const caseContent=fs.readFileSync(path.join(root,'customer-case.html'),'utf8').replace('__FEATURE_LINKS__',links);
+        put(page.slug+'/index.html',`<!doctype html><html lang="pt-PT"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">${metadata(page.title,page.description,url,graph(page.title,page.description,url,[breadcrumbs]))}<meta name="aql-website-version" content="${version}"><link rel="icon" href="/aql-fisio-mark.svg"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/fisio-seo-20261101.css"><link rel="stylesheet" href="/assets/responsive-20261103.css?v=${version}"><link rel="stylesheet" href="/assets/customer-story-20261109.css?v=${version}"><script type="module" src="/assets/index-fisio-campaign-20261022.js?v=${version}"></script><script type="module" src="/assets/customer-story-20261109.js?v=${version}"></script></head><body class="aql-feature-page"><a class="skip" href="#conteudo">Saltar para o conteúdo</a>${navigation}${caseContent}${footer}</body></html>`);
+        continue;
+      }
       put(page.slug+'/index.html',`<!doctype html>
 <html lang="pt-PT"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 ${metadata(page.title,page.description,url,graph(page.title,page.description,url,[breadcrumbs]))}
 <meta name="aql-website-version" content="${version}"><link rel="icon" href="/aql-fisio-mark.svg"><meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/fisio-seo-20261101.css"><link rel="stylesheet" href="/assets/responsive-20261103.css?v=${version}"><script type="module" src="/assets/index-fisio-campaign-20261022.js?v=${version}"></script></head><body class="aql-feature-page">
+<link rel="stylesheet" href="/assets/fisio-seo-20261101.css"><link rel="stylesheet" href="/assets/responsive-20261103.css?v=${version}"><script type="module" src="/assets/index-fisio-campaign-20261022.js?v=${version}"></script><script type="module" src="/assets/customer-story-20261109.js?v=${version}"></script></head><body class="aql-feature-page">
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
 ${navigation}
 <main id="conteudo"><section class="feature-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Localização"><a href="/">AQL Fisio</a><span aria-hidden="true">/</span><span aria-current="page">${escape(page.label)}</span></nav><p class="eyebrow">${escape(page.label)} · AQL Fisio</p><h1>${escape(page.h1)}</h1><p class="intro">${escape(page.intro)}</p><div class="actions"><a class="button" href="/#contact">Agendar apresentação</a><a class="button secondary" href="/#pricing">Comparar planos</a></div></div></section>

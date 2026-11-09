@@ -1,0 +1,63 @@
+/* Customer experience, scoped to its own sections. */
+.customer-story{padding:88px 24px;background:linear-gradient(155deg,#edf9fa,#f7fafb 62%,#fff);color:#102b43;scroll-margin-top:100px;font-family:Manrope,Arial,sans-serif}
+.customer-story-shell,.customer-case-shell{max-width:1100px;margin:auto}
+.customer-story-heading{max-width:650px;margin-bottom:40px}
+.customer-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#087b8f}
+.customer-eyebrow i{height:7px;width:7px;border-radius:50%;background:#0aa6b4;box-shadow:0 0 0 5px #0aa6b412}
+.customer-story h2,.customer-case h1,.customer-case h2{font-weight:800;letter-spacing:-.04em;line-height:1.15}
+.customer-story-heading h2{font-size:clamp(30px,3.6vw,45px);margin:18px 0}
+.customer-story-heading>p{font-size:16px;line-height:1.8;color:#526779;max-width:570px}
+.customer-story-layout{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.5fr);align-items:center;gap:48px}
+.customer-identity{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.customer-logo{background:#fff;border:1px solid #dce8ee;border-radius:22px;padding:20px;box-shadow:0 12px 28px #143c4808;transition:transform .25s}
+.customer-logo img{display:block;width:112px;height:auto}
+.customer-logo:hover{transform:translateY(-3px)}
+.customer-location{font-size:12px;font-weight:600;color:#648091;margin:0 0 8px}
+.customer-identity h3{font-size:21px;line-height:1.4;font-weight:800;margin:0 0 16px}
+.customer-facts{display:flex;flex-wrap:wrap;gap:7px}
+.customer-facts span{border:1px solid #cce3e8;background:#ffffffa8;padding:6px 10px;border-radius:30px;font-size:11px;font-weight:600;color:#375c6e}
+.customer-quote-card{position:relative;margin:0;padding:42px;border:1px solid #d8e8ee;border-radius:26px;background:#fff;box-shadow:0 18px 60px #0c3a4810}
+.customer-quote-mark{display:block;color:#08a1b4;font-family:Georgia,serif;font-size:72px;line-height:.7;margin-bottom:20px;user-select:none}
+.customer-quote-card blockquote{padding:0;margin:0;border:0}
+.customer-quote-card blockquote p{margin:0;font-size:clamp(19px,2vw,25px);line-height:1.65;letter-spacing:-.025em;font-weight:500;color:#12334a}
+.customer-quote-card figcaption{margin-top:26px;display:flex;gap:14px;align-items:center}
+.customer-signature-line{width:28px;height:2px;background:#12a6b4;flex-shrink:0}
+.customer-quote-card figcaption strong{display:block;font-size:14px;font-weight:800;color:#12334a}
+.customer-quote-card figcaption div>span{display:block;margin-top:5px;color:#60788a;font-size:12px;line-height:1.6}
+.customer-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:30px 0;margin-top:36px;border-top:1px solid #d9e8ed;border-bottom:1px solid #d9e8ed}
+.customer-benefits article{display:flex;gap:13px;align-items:flex-start;transition:transform .2s}
+.customer-benefits article:hover{transform:translateY(-3px)}
+.customer-benefit-icon{display:flex;align-items:center;justify-content:center;width:34px;height:34px;flex-shrink:0;background:#dff2f4;border:1px solid #c3e5e9;border-radius:11px;color:#08788c;font-size:11px;font-weight:800}
+.customer-benefits h3{margin:1px 0 7px;font-size:14px;font-weight:800;line-height:1.4}
+.customer-benefits p{margin:0;font-size:13px;line-height:1.7;color:#587082}
+.customer-story-link{display:inline-flex;gap:28px;align-items:center;min-height:44px;margin-top:20px;color:#076e83;text-decoration:none;font-size:14px;font-weight:800}
+.customer-story-link>span:first-child{border-bottom:1px solid #a9d7df;padding-bottom:3px}
+.customer-story-link>span:last-child{transition:transform .2s}
+.customer-story-link:hover>span:last-child{transform:translate(3px,-3px)}
+.customer-story a:focus-visible,.customer-case a:focus-visible{outline:3px solid #08a5bb;outline-offset:5px;border-radius:5px}
+.customer-case{color:#12334a;font-family:Manrope,Arial,sans-serif}
+.customer-case-hero{padding:32px 24px 58px;background:linear-gradient(135deg,#effafb,#f7fafb)}
+.customer-case h1{font-size:clamp(32px,4vw,52px);margin:22px 0}
+.customer-case .intro{max-width:650px}
+.customer-case-profile{display:flex;align-items:center;gap:24px;margin-top:32px}
+.customer-case-profile img{padding:12px;background:#fff;border:1px solid #deeaee;border-radius:16px;object-fit:contain;box-sizing:content-box}
+.customer-case-profile p{max-width:450px;font-size:14px;line-height:1.8;color:#536e80}
+.customer-case-profile p span{display:block;font-size:12px;margin-top:12px;font-weight:700}
+.customer-case-content{padding:60px 24px;box-sizing:border-box}
+.customer-case-reading{display:grid;grid-template-columns:210px minmax(0,1fr);gap:56px}
+.customer-case-index{position:sticky;top:112px;align-self:start;display:flex;flex-direction:column;gap:4px;border-left:1px solid #dce9ee;padding-left:18px}
+.customer-case-index p{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#6b8290;margin:0 0 12px}
+.customer-case-index a{padding:9px 0;font-size:12px;color:#446475;text-decoration:none;transition:color .2s}
+.customer-case-index a:hover{color:#0097ac}
+.customer-case-section{margin-bottom:48px;scroll-margin-top:112px}
+.customer-case h2{font-size:clamp(25px,2.8vw,33px);margin:16px 0}
+.customer-case-section p,.customer-case-cta p{font-size:16px;line-height:1.9;color:#536e80}
+.customer-usage-list{padding:0;margin:24px 0;list-style:none;border-top:1px solid #e1eaee}
+.customer-usage-list li{padding:14px 0;border-bottom:1px solid #e1eaee;font-size:14px;color:#34596e;line-height:1.6}
+.customer-usage-list a{display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;color:#087b8f;font-weight:700}
+.customer-case-section .customer-case-note{font-size:12px;color:#6b8290}
+.customer-case-final{scroll-margin-top:112px;margin:20px 0 48px}
+.customer-case-final>.customer-eyebrow{margin-bottom:18px}
+.customer-case-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:32px;border-radius:22px;background:#edf8fa}
+@media(max-width:760px){.customer-story{padding:56px 22px}.customer-story-layout{grid-template-columns:1fr;gap:26px}.customer-identity{flex-direction:row;align-items:center;gap:18px}.customer-logo{padding:12px;border-radius:16px}.customer-logo img{width:80px}.customer-identity h3{font-size:17px;margin-bottom:10px}.customer-location{font-size:11px}.customer-facts{gap:5px}.customer-facts span{font-size:10px;padding:5px 8px}.customer-quote-card{padding:27px;border-radius:20px}.customer-benefits{grid-template-columns:1fr;gap:23px;margin-top:28px;padding:26px 0}.customer-case-reading{grid-template-columns:1fr;gap:30px}.customer-case-index{position:static;flex-direction:row;flex-wrap:wrap;gap:8px 18px}.customer-case-index p{width:100%;margin:0}.customer-case-profile{gap:16px;align-items:flex-start}.customer-case-profile img{width:80px;height:auto;padding:8px}.customer-case-profile p{font-size:12px;margin:0}.customer-case-content{padding-top:32px}.customer-case-cta{padding:25px}.customer-case-cta .actions{width:100%}.customer-case-cta .button{width:100%}}
+@media(prefers-reduced-motion:reduce){.customer-story *,.customer-case *{animation:none!important;transition:none!important;scroll-behavior:auto!important}.customer-story *:hover{transform:none!important}}

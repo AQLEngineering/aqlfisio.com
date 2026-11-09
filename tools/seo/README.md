@@ -64,3 +64,15 @@ O vídeo foi substituído por um painel animado com o aspeto da LIA: cabeçalho 
 ## 2026.11.03.4 — mobile e tablet
 
 Cabeçalho compacto, painel de navegação com fundo sobreposto, bloqueio do scroll, fecho com Escape e gestão do foco. Ações alinhadas, menu em tablet até 1180 px, grelhas adaptadas, hero sem sobreposição e exemplos LIA empilhados em ecrãs intermédios.
+
+## 2026.11.09.3 — experiência do Gabinete em Espinho
+
+Testemunho de Gisela Silva antes dos planos, com o logótipo fornecido, cinco meses de utilização e benefícios relatados pelo Gabinete. Página própria com o desafio inicial, utilização diária e citação original. Inclui ligações às funcionalidades, sitemap e animações compatíveis com movimento reduzido.
+
+## 2026.11.09.4 — entradas suaves ao deslocar
+
+Fades de opacidade e deslocamento curto com um observador de interseção, sem eventos de scroll nem dependências novas. O HTML permanece visível antes e sem JavaScript. Cada bloco anima uma vez, sem sobrepor animações de pais e filhos. A preferência de movimento reduzido é respeitada, incluindo alterações durante a visita.
+
+## 2026.11.09.5 — fades mais visíveis
+
+Entrada de 820 ms a partir de opacidade zero e deslocamento de 24 px, iniciada quando o bloco já entrou na área visível. Abrange imagens, cartões e grupos de conteúdo principais. A opacidade inicial do HTML continua visível; apenas a animação temporária altera a opacidade durante a entrada.

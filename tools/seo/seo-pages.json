@@ -163,5 +163,12 @@
         "Pode agendar uma apresentação de 30 minutos para conhecer o funcionamento e as condições de utilização da LIA."
       ]
     ]
+  },
+  {
+    "slug": "clientes/gabinete-saude-bem-estar-espinho",
+    "kind": "customer-story",
+    "label": "Experiência do Gabinete em Espinho",
+    "title": "Gisela Silva e o AQL Fisio | Experiência de Cliente em Espinho",
+    "description": "Conheça a experiência de Gisela Silva e do Gabinete de Saúde e Bem-Estar, em Espinho, após cinco meses de AQL Fisio na gestão e no acompanhamento dos utentes."
   }
 ]

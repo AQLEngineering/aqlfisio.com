@@ -22,7 +22,7 @@ for(const term of ['19,90','39,90','69,90','99,90','1024 MB','LIA','calendly.com
 for(const plan of ['gabinete','clinic','care','intelligence'])assert.ok(home.includes(`signup=1&amp;plan=${plan}`));
 const app=JSON.parse(home.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(e=>e['@type']==='SoftwareApplication');
 assert.deepEqual(app.offers.map(o=>o.price),new Date()<new Date('2027-01-01T00:00:00Z')?['14.90','29.90','49.90','69.90']:['19.90','39.90','69.90','99.90']);assert.ok(!app.aggregateRating&&!app.review);
-const sitemap=fs.readFileSync('sitemap.xml','utf8');assert.equal((sitemap.match(/<loc>/g)||[]).length,10);
+const sitemap=fs.readFileSync('sitemap.xml','utf8');assert.equal((sitemap.match(/<loc>/g)||[]).length,11);
 assert.ok(fs.readFileSync('robots.txt','utf8').includes('Sitemap: https://www.aqlfisio.com/sitemap.xml'));
 console.log('SEO checks passed: six complete HTML pages, unique metadata, canonical URLs, structured data, plans, purchase links, sitemap and robots.');
 
@@ -41,3 +41,9 @@ for(const file of ['index.html',...pages.map(p=>p.slug+'/index.html')]){
  assert.ok(html.includes('class="aql-platform-menu"'),file+': platform dropdown');
  assert.ok(!html.includes('class="site-header"'),file+': no legacy navigation');
 }
+
+assert.ok(home.indexOf('id="experiencia-cliente"')<home.indexOf('id="pricing"'),'Customer testimony precedes pricing');
+assert.ok(home.includes('Gisela Silva')&&home.includes('5 meses de utilização'));
+const story=fs.readFileSync('clientes/gabinete-saude-bem-estar-espinho/index.html','utf8');
+assert.ok(story.includes('O desafio inicial')&&story.includes('aria-label="Navegação principal"'));
+assert.ok(fs.readFileSync('assets/customer-story-20261109.css','utf8').includes('prefers-reduced-motion'));
