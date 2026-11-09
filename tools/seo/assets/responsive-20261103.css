@@ -11,3 +11,15 @@
 @media(prefers-reduced-motion:reduce){.aql-site-nav *{scroll-behavior:auto!important}}
 @media(max-width:1180px){.aql-fisio-promotional-hero h1{letter-spacing:-.035em!important;line-height:1.13!important}}
 @media(min-width:960px) and (max-width:1180px){.aql-fisio-promotional-hero{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:32px;padding-top:135px!important;padding-bottom:65px!important}.aql-fisio-promotional-hero>div:first-child{min-width:0;max-width:100%!important}.aql-fisio-promotional-hero>div:nth-child(2){position:relative!important;inset:auto!important;margin:0!important;width:100%!important;max-width:100%!important;transform:none!important}.aql-fisio-promotional-hero>div:nth-child(2) img{max-height:560px;object-fit:contain;height:auto;width:100%}.aql-fisio-promotional-hero h1{font-size:clamp(34px,3.7vw,43px)!important}.aql-fisio-promotional-hero .flex.flex-wrap{gap:12px!important}}
+
+/* Feature navigation */
+.aql-platform-menu{position:relative}
+.aql-platform-menu>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;font:inherit;color:inherit;padding:10px 0}
+.aql-platform-menu>summary::after{content:"⌄";font-size:14px}
+.aql-platform-menu>summary::-webkit-details-marker{display:none}
+.aql-platform-menu>summary:focus-visible,.aql-feature-link:focus-visible{outline:3px solid #06b6d4;outline-offset:4px}
+.aql-platform-options{position:absolute;top:100%;left:0;min-width:230px;display:grid;gap:3px;padding:10px;background:#fff;border:1px solid #dbe5ee;border-radius:14px;box-shadow:0 15px 35px #07172c20;z-index:60}
+.aql-platform-options a{display:block;padding:10px 12px;border-radius:8px;color:#16334a;text-decoration:none}
+.aql-platform-options a:hover,.aql-platform-options a:focus-visible{background:#ecfeff;color:#0e7490}
+.aql-feature-link{display:inline-block;margin-top:16px;font-weight:700;color:#0e7490;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:1180px){.aql-platform-menu{width:100%}.aql-platform-options{position:static;min-width:0;box-shadow:none;margin:4px 0 10px}.aql-platform-menu>summary{padding:12px}}
