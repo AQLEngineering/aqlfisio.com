@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitar eliminação de conta — AQL Fisio</title>
+  <meta name="description" content="Solicite a eliminação de uma conta de profissional ou de clínica no AQL Fisio.">
+  <link rel="canonical" href="https://www.aqlfisio.com/eliminar-conta/">
+  <link rel="icon" href="/aql-fisio-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/legal.css">
+  <link rel="stylesheet" href="/eliminar-conta/form.css">
+  <script src="/eliminar-conta/form.js" defer></script>
+</head>
+<body>
+  <header><a href="/" class="brand"><img src="/aql-fisio-mark.svg" width="32" height="32" alt="">AQL Fisio</a></header>
+  <main>
+    <h1>Solicitar eliminação de conta — AQL Fisio</h1>
+    <p>O AQL Fisio permite solicitar a eliminação de contas de utilizadores e de clínicas. Por motivos de segurança e proteção da informação clínica, todos os pedidos são sujeitos a verificação de identidade e tratados de acordo com a legislação aplicável.</p>
+    <form id="deletion-request" hidden>
+      <label>Tipo de pedido
+        <select name="type" required>
+          <option value="">Selecione o tipo de pedido</option>
+          <option value="professional">Conta de profissional</option>
+          <option value="clinic">Conta de clínica</option>
+        </select>
+      </label>
+      <label>Nome do requerente
+        <input name="name" autocomplete="name" maxlength="120" required>
+      </label>
+      <label>Email associado à conta
+        <input name="email" type="email" autocomplete="email" maxlength="254" required>
+      </label>
+      <label><span id="clinic-label">Nome da clínica (se aplicável)</span>
+        <input name="clinic" autocomplete="organization" maxlength="160">
+      </label>
+      <label>Observações adicionais (opcional)
+        <textarea name="notes" rows="4" maxlength="1200" aria-describedby="notes-help"></textarea>
+      </label>
+      <p class="hint" id="notes-help">Não inclua dados clínicos, palavras-passe ou outros dados sensíveis.</p>
+      <div hidden><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button type="submit">Enviar pedido de eliminação</button>
+      <p id="request-status" role="status" aria-live="polite" tabindex="-1"></p>
+    </form>
+    <noscript><p>Para usar o formulário, ative o JavaScript. Também pode enviar o pedido para <a href="mailto:geral@aqlfisio.com">geral@aqlfisio.com</a>.</p></noscript>
+    <h2>Contas de profissionais</h2>
+    <p>A eliminação de contas de profissionais é processada após verificação da identidade e das permissões aplicáveis. Os dados pessoais associados à conta serão eliminados, exceto quando exista uma obrigação legal ou outro fundamento legítimo de conservação.</p>
+    <h2>Contas de clínicas</h2>
+    <p>O pedido de eliminação de conta pode ser apresentado a qualquer momento. A eliminação da conta e a cessação do contrato de subscrição são procedimentos distintos.</p>
+    <p>A apresentação de um pedido não extingue automaticamente as obrigações contratuais existentes, incluindo eventuais condições de fidelização ou pagamentos devidos, nos termos legalmente aplicáveis.</p>
+    <h2>Informação clínica e faturação</h2>
+    <p>Os dados associados à conta são eliminados quando aplicável, respeitando as obrigações legais de conservação de registos clínicos, documentos fiscais e outros dados cujo tratamento deva continuar por fundamento legítimo. Os dados conservados ficam sujeitos a acesso restrito e são eliminados quando deixar de existir fundamento para a sua retenção.</p>
+  </main>
+  <footer><nav aria-label="Informação legal"><a href="/">AQL Fisio</a><a href="/privacidade/">Privacidade e cookies</a><a href="/termos/">Termos e condições</a><a href="mailto:geral@aqlfisio.com">Contactar a equipa</a></nav></footer>
+</body>
+</html>
