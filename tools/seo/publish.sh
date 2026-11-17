@@ -9,7 +9,7 @@ git clone --depth 1 --branch main --single-branch https://github.com/AQLEngineer
 node "$project_dir/stage-seo.cjs" "$deploy_dir/site"
 cd "$deploy_dir/site"
 baseline_sha="$(git rev-parse HEAD)"
-git add clientes assets/clientes assets/customer-story-20261109.css assets/customer-story-20261109.js identificacao privacidade termos reclamacoes assets/responsive-20261103.css assets/lia-animation-20261103.css assets/lia-animation-20261103.js assets/lia-actions-20261103.css assets/lia-actions-demo-20261103.js index.html assets/index-fisio-campaign-20261022.js assets/fisio-seo-20261101.css assets/lia website-version.txt robots.txt sitemap.xml .github/workflows/close-adoption-campaign.yml agenda-clinica processo-clinico exercicios-terapeuticos automacoes lia tools/seo
+git add assets/fisio-feature-carousel-20261117.css clientes assets/clientes assets/customer-story-20261109.css assets/customer-story-20261109.js identificacao privacidade termos reclamacoes assets/responsive-20261103.css assets/lia-animation-20261103.css assets/lia-animation-20261103.js assets/lia-actions-20261103.css assets/lia-actions-demo-20261103.js index.html assets/index-fisio-campaign-20261022.js assets/fisio-seo-20261101.css assets/lia website-version.txt robots.txt sitemap.xml .github/workflows/close-adoption-campaign.yml agenda-clinica processo-clinico exercicios-terapeuticos automacoes lia tools/seo
 if git diff --cached --quiet; then
   echo 'Esta versão já se encontra publicada no repositório.'
   exit 0
