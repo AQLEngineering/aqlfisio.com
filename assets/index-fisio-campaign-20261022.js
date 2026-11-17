@@ -161,28 +161,21 @@ function FisioFeatureCarousel() {
   const [active, setActive] = K.useState(0);
   const [playing, setPlaying] = K.useState(false);
   const [hovered, setHovered] = K.useState(false);
-  const [ready, setReady] = K.useState(false);
   const count = heroFeatures.length;
 
   K.useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const syncPreference = () => setPlaying(!preference.matches);
     syncPreference();
-    setReady(true);
     preference.addEventListener("change", syncPreference);
     return () => preference.removeEventListener("change", syncPreference);
   }, []);
 
   K.useEffect(() => {
     if (!playing || hovered) return;
-    const timer = window.setTimeout(() => setActive((active + 1) % count), 3500);
+    const timer = window.setTimeout(() => setActive((active + 1) % count), 2500);
     return () => window.clearTimeout(timer);
   }, [active, playing, hovered, count]);
-
-  function step(direction) {
-    setPlaying(false);
-    setActive((current) => (current + direction + count) % count);
-  }
 
   return v.jsxs("section", {
     className: "aql-feature-carousel",
@@ -207,18 +200,6 @@ function FisioFeatureCarousel() {
             ],
           }, title);
         }),
-      }),
-      ready && v.jsxs("div", {
-        className: "aql-feature-controls",
-        children: [
-          v.jsx("button", { type: "button", onClick: () => step(-1), "aria-label": "Funcionalidade anterior", children: "‹" }),
-          v.jsx("button", {
-            type: "button", className: "aql-feature-play",
-            onClick: () => setPlaying(!playing),
-            children: playing ? "Pausar" : "Reproduzir",
-          }),
-          v.jsx("button", { type: "button", onClick: () => step(1), "aria-label": "Funcionalidade seguinte", children: "›" }),
-        ],
       }),
     ],
   });

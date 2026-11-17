@@ -3,7 +3,6 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-rows: minmax(0, 1fr) 38px;
   min-width: 0;
   height: clamp(312px, 33vw, 465px);
   padding: 0 clamp(8px, 2.4vw, 36px) 20px;
@@ -56,7 +55,7 @@
 .aql-feature-card[data-position="below"],
 .aql-feature-card[data-position="exit"] {
   visibility: visible;
-  transition: transform 720ms cubic-bezier(.22, .8, .3, 1), opacity 680ms ease;
+  transition: transform 540ms cubic-bezier(.22, .8, .3, 1), opacity 500ms ease;
 }
 
 .aql-feature-card[data-position="front"] {
@@ -98,33 +97,6 @@
   line-height: 1.5;
   text-wrap: balance;
 }
-
-.aql-feature-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.aql-feature-controls button {
-  display: grid;
-  place-items: center;
-  min-width: 38px;
-  min-height: 38px;
-  padding: 0 10px;
-  border: 1px solid #c5d8e5;
-  border-radius: 24px;
-  background: rgb(255 255 255 / 74%);
-  color: #173c5a;
-  font: inherit;
-  font-size: 1.38rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.aql-feature-controls .aql-feature-play { font-size: .82rem; font-weight: 700; }
-.aql-feature-controls button:hover { background: white; }
-.aql-feature-controls button:focus-visible { outline: 2px solid #087f9d; outline-offset: 3px; }
 
 @media (max-width: 760px) {
   .aql-feature-carousel { height: clamp(280px, 56vw, 345px); padding-inline: 8px; }
