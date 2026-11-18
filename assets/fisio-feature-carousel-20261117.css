@@ -81,6 +81,20 @@
 }
 
 .aql-feature-card:not([data-position="front"]) > p { visibility: hidden; }
+/* The exposed edge previews the next feature while the active card remains prominent. */
+.aql-feature-card[data-position="below"] > .aql-feature-card-title {
+  position: absolute;
+  inset: auto 12% clamp(8px, 1vw, 14px);
+  overflow: hidden;
+  visibility: visible;
+  color: #425b70;
+  font-size: clamp(.85rem, 1.35vw, 1.15rem);
+  font-weight: 650;
+  letter-spacing: -.02em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .aql-feature-card-title {
   margin: 0;
   font-size: clamp(1.32rem, 2.7vw, 2.65rem);
