@@ -137,24 +137,24 @@ Error generating stack: `+c.message+`
   open&&v.jsxs(K.Fragment,{children:[v.jsx('button',{type:'button',className:'aql-nav-scrim','aria-label':'Fechar navegação',onClick:close,tabIndex:-1}),v.jsxs('div',{id:'mobile-navigation',ref:panel,className:'aql-nav-mobile',children:[v.jsx('div',{className:'aql-nav-links',children:links.map(link)}),v.jsxs('div',{className:'aql-nav-cta',children:[v.jsx('a',{href:'/#contact',onClick:close,className:'aql-nav-primary',children:'Agendar apresentação'}),v.jsx('a',{href:'https://aqlapps.com/fisio/',onClick:close,style:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:44,color:'#31485b',fontWeight:650,textDecoration:'none'},children:'Entrar'})]})]})]})]});
 }
 const heroFeatures = [
-  ["Aulas de grupo", "Crie turmas, inscreva utentes e registe presenças.", [["path",{"d":"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"}],["circle",{"cx":"9","cy":"7","r":"4"}],["path",{"d":"M22 21v-2a4 4 0 0 0-3-3.87"}],["path",{"d":"M16 3.13a4 4 0 0 1 0 7.75"}]]],
-  ["Agenda clínica", "Organize marcações por profissional, terapia e sala.", [["path",{"d":"M8 2v4"}],["path",{"d":"M16 2v4"}],["rect",{"width":"18","height":"18","x":"3","y":"4","rx":"2"}],["path",{"d":"M3 10h18"}],["path",{"d":"M8 14h.01"}],["path",{"d":"M12 14h.01"}],["path",{"d":"M16 14h.01"}],["path",{"d":"M8 18h.01"}],["path",{"d":"M12 18h.01"}],["path",{"d":"M16 18h.01"}]]],
-  ["Comissões dos profissionais", "Defina regras por serviço e consulte o mapa mensal.", [["line",{"x1":"19","x2":"5","y1":"5","y2":"19"}],["circle",{"cx":"6.5","cy":"6.5","r":"2.5"}],["circle",{"cx":"17.5","cy":"17.5","r":"2.5"}]]],
-  ["Processo clínico", "Acompanhe avaliações, episódios e planos terapêuticos.", [["rect",{"width":"8","height":"4","x":"8","y":"2","rx":"1","ry":"1"}],["path",{"d":"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"}],["path",{"d":"M12 11h4"}],["path",{"d":"M12 16h4"}],["path",{"d":"M8 11h.01"}],["path",{"d":"M8 16h.01"}]]],
-  ["Faturação e pagamentos", "Registe recebimentos e emita documentos fiscais.", [["rect",{"width":"20","height":"14","x":"2","y":"5","rx":"2"}],["line",{"x1":"2","x2":"22","y1":"10","y2":"10"}]]],
-  ["Exercícios terapêuticos", "Prescreva exercícios e programas individualizados.", [["path",{"d":"M14.4 14.4 9.6 9.6"}],["path",{"d":"M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"}],["path",{"d":"m21.5 21.5-1.4-1.4"}],["path",{"d":"M3.9 3.9 2.5 2.5"}],["path",{"d":"M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"}]]],
-  ["Acompanhamento em casa", "Partilhe o plano com o utente e acompanhe a adesão.", [["path",{"d":"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"}],["path",{"d":"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"}]]],
-  ["AQL Move", "Meça ângulos, amplitude e repetições com a câmara.", [["path",{"d":"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"}]]],
-  ["LIA", "Prepare consultas, notas e resumos com apoio de IA.", [["path",{"d":"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"}],["path",{"d":"M20 3v4"}],["path",{"d":"M22 5h-4"}],["path",{"d":"M4 17v2"}],["path",{"d":"M5 18H3"}]]],
-  ["LIA Actions", "Dê seguimento a cancelamentos e proponha novos horários.", [["path",{"d":"m3 17 2 2 4-4"}],["path",{"d":"m3 7 2 2 4-4"}],["path",{"d":"M13 6h8"}],["path",{"d":"M13 12h8"}],["path",{"d":"M13 18h8"}]]],
-  ["Automações e lembretes", "Organize confirmações, lembretes e seguimentos.", [["path",{"d":"M10.268 21a2 2 0 0 0 3.464 0"}],["path",{"d":"M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"}]]],
-  ["Comunicações", "Contacte os utentes por email, SMS ou WhatsApp.", [["path",{"d":"M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"}],["path",{"d":"M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"}]]],
-  ["Portal do utente", "Dê acesso aos exercícios e ao plano de acompanhamento.", [["circle",{"cx":"12","cy":"8","r":"5"}],["path",{"d":"M20 21a8 8 0 0 0-16 0"}]]],
-  ["Lista de espera", "Encontre utentes disponíveis quando abre uma vaga.", [["circle",{"cx":"12","cy":"12","r":"10"}],["polyline",{"points":"12 6 12 12 16 14"}]]],
-  ["Pacotes de sessões", "Associe pacotes aos utentes e consulte o saldo.", [["path",{"d":"M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"}],["path",{"d":"M12 22V12"}],["polyline",{"points":"3.29 7 12 12 20.71 7"}],["path",{"d":"m7.5 4.27 9 5.15"}]]],
-  ["Gestão da equipa", "Organize profissionais, salas e permissões.", [["path",{"d":"M16 2v2"}],["path",{"d":"M17.915 22a6 6 0 0 0-12 0"}],["path",{"d":"M8 2v2"}],["circle",{"cx":"12","cy":"12","r":"4"}],["rect",{"x":"3","y":"4","width":"18","height":"18","rx":"2"}]]],
-  ["Relatórios e estatísticas", "Consulte a atividade da clínica e a evolução dos utentes.", [["path",{"d":"M3 3v16a2 2 0 0 0 2 2h16"}],["path",{"d":"M18 17V9"}],["path",{"d":"M13 17V5"}],["path",{"d":"M8 17v-3"}]]],
-  ["Seguradoras", "Acompanhe processos, prazos e valores a receber.", [["path",{"d":"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"}],["path",{"d":"m9 12 2 2 4-4"}]]],
+  ["Aulas de grupo", "Crie turmas, inscreva utentes e registe presenças."],
+  ["Agenda clínica", "Organize marcações por profissional, terapia e sala."],
+  ["Comissões dos profissionais", "Defina regras por serviço e consulte o mapa mensal."],
+  ["Processo clínico", "Acompanhe avaliações, episódios e planos terapêuticos."],
+  ["Faturação e pagamentos", "Registe recebimentos e emita documentos fiscais."],
+  ["Exercícios terapêuticos", "Prescreva exercícios e programas individualizados."],
+  ["Acompanhamento em casa", "Partilhe o plano com o utente e acompanhe a adesão."],
+  ["AQL Move", "Meça ângulos, amplitude e repetições com a câmara."],
+  ["LIA", "Prepare consultas, notas e resumos com apoio de IA."],
+  ["LIA Actions", "Dê seguimento a cancelamentos e proponha novos horários."],
+  ["Automações e lembretes", "Organize confirmações, lembretes e seguimentos."],
+  ["Comunicações", "Contacte os utentes por email, SMS ou WhatsApp."],
+  ["Portal do utente", "Dê acesso aos exercícios e ao plano de acompanhamento."],
+  ["Lista de espera", "Encontre utentes disponíveis quando abre uma vaga."],
+  ["Pacotes de sessões", "Associe pacotes aos utentes e consulte o saldo."],
+  ["Gestão da equipa", "Organize profissionais, salas e permissões."],
+  ["Relatórios e estatísticas", "Consulte a atividade da clínica e a evolução dos utentes."],
+  ["Seguradoras", "Acompanhe processos, prazos e valores a receber."],
 ];
 
 function FisioFeatureCarousel() {
@@ -186,7 +186,7 @@ function FisioFeatureCarousel() {
       v.jsx("div", {
         className: "aql-feature-stack",
         "aria-live": playing ? "off" : "polite",
-        children: heroFeatures.map(([title, description, icon], index) => {
+        children: heroFeatures.map(([title, description], index) => {
           const distance = (index - active + count) % count;
           const position = distance === 0 ? "front" : distance === 1 ? "below" :
             distance === count - 1 ? "above" : distance === count - 2 ? "exit" : "waiting";
@@ -195,15 +195,6 @@ function FisioFeatureCarousel() {
             "data-position": position,
             "aria-hidden": distance !== 0,
             children: [
-              v.jsx("span", {
-                className: "aql-feature-card-icon",
-                "aria-hidden": true,
-                children: v.jsx("svg", {
-                  viewBox: "0 0 24 24", fill: "none", stroke: "currentColor",
-                  strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round",
-                  children: icon.map(([tag, attrs], part) => v.jsx(tag, attrs, part)),
-                }),
-              }),
               v.jsx("p", { className: "aql-feature-card-title", children: title }),
               v.jsx("p", { className: "aql-feature-card-description", children: description }),
             ],
