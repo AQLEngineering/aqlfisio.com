@@ -1,0 +1,40 @@
+.fisio-android {
+  padding: clamp(44px, 6vw, 80px) 20px;
+  background: #f1f7fa;
+  color: #061a3b;
+}
+.fisio-android-inner { width: min(100%, 940px); margin-inline: auto; }
+.fisio-android h2 {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: clamp(1.65rem, 4vw, 2.6rem);
+  font-weight: 750;
+  letter-spacing: -.04em;
+  line-height: 1.15;
+}
+.fisio-android-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.fisio-android-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid #d9e5ed;
+  border-radius: 20px;
+  background: #fff;
+}
+.fisio-android-device {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #086782;
+  font-size: .82rem;
+  font-weight: 700;
+}
+.fisio-android-card h3 { margin: 0; font-size: 1.26rem; font-weight: 750; }
+.fisio-android-description { margin: 6px 0 20px; color: #425b70; line-height: 1.5; }
+.fisio-android-badge { display: inline-flex; margin-top: auto; border-radius: 6px; }
+.fisio-android-badge img { display: block; width: 165px; height: auto; }
+.fisio-android-badge:focus-visible { outline: 2px solid #087f9d; outline-offset: 4px; }
+.fisio-android-legal { margin: 18px 0 0; text-align: center; color: #425b70; font-size: .75rem; }
+@media (max-width: 600px) { .fisio-android-grid { grid-template-columns: 1fr; } }
