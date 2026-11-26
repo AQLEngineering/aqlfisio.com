@@ -1,9 +1,9 @@
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{pathToFileURL}=require('node:url');
-const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.09.5';
+const root=__dirname,base='https://www.aqlfisio.com',version=process.env.AQL_SITE_VERSION||'2026.11.26.2';
 const pages=JSON.parse(fs.readFileSync(path.join(root,'seo-pages.json'),'utf8'));
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
-const put=(name,content)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,content.replace(/^[\t ]+$/gm,''))};
+const put=(name,content)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,(name.endsWith('.html')&&!content.includes('/assets/contact-chat-20261126.js')?content.replace('</head>',"<link rel=\"stylesheet\" href=\"/assets/contact-chat-20261126.css\"><script defer src=\"/assets/contact-chat-20261126.js\"></script>"+'</head>'):content).replace(/^[\t ]+$/gm,''))};
 const organization={'@type':'Organization','@id':base+'/#organization',name:'AQL Engineering, Lda.',url:'https://www.aqlengineering.com/',logo:base+'/aql-fisio-mark.svg'};
 const website={'@type':'WebSite','@id':base+'/#website',name:'AQL Fisio',url:base+'/',inLanguage:'pt-PT',publisher:{'@id':organization['@id']}};
 function graph(title,description,url,extra=[]){return {'@context':'https://schema.org','@graph':[organization,website,{'@type':'WebPage','@id':url+'#webpage',url,name:title,description,inLanguage:'pt-PT',isPartOf:{'@id':website['@id']},about:{'@id':base+'/#software'}},...extra]};}
